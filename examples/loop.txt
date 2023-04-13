@@ -1,0 +1,35 @@
+00: f1 0f 0a 00  # magic number
+04: 00 00 00 00  # version
+08: 00 00 00 0c  # entry point
+
+0c: 00 00 00 01  # iconst
+10: 00 00 00 05  #   5 (loop counter)
+
+14: 00 00 00 01  # iconst
+18: 00 00 00 01  #   1
+1c: 00 00 00 12  # sub
+
+20: 00 00 00 01  # iconst
+24: 00 00 00 01  #   fd 1
+28: 00 00 00 01  # iconst
+2c: 00 00 00 60  #   address of string
+30: 00 00 00 01  # iconst
+34: 00 00 00 0e  #   length of string
+38: 00 00 00 03  # syscall
+3c: 00 00 00 01  #   write
+
+40: 00 00 00 20  # dup
+44: 00 00 00 04  # jiz
+48: 00 00 00 5c  #   destination
+
+4c: 00 00 00 01  # iconst
+50: 00 00 00 00  #   0
+54: 00 00 00 04  # jiz
+58: 00 00 00 14  #   destination
+
+5c: 00 00 00 00  # halt
+
+60: 48 65 6c 6c
+64: 6f 2c 20 57
+68: 6f 72 6c 64
+6c: 21 0a

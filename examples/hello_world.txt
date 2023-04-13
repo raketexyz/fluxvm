@@ -1,0 +1,18 @@
+00: f1 0f 0a 00  # 00--03: Magic number
+04: 00 00 00 00  # 04--07: Version
+08: 00 00 00 0c  # 08--0b: Entry point
+
+0c: 00 00 00 01  # 0c--0f: iconst
+10: 00 00 00 01  # 10--13:   fd for stdout
+14: 00 00 00 01  # 14--17: iconst
+18: 00 00 00 30  # 18--1b:   address of string
+1c: 00 00 00 01  # 1c--1f: iconst
+20: 00 00 00 0e  # 20--23:   length of string
+24: 00 00 00 03  # 24--27: syscall
+28: 00 00 00 01  # 28--2b:   write
+2c: 00 00 00 00  # 2c--2f: halt
+
+30: 48 65 6c 6c  # 30--33: "Hell"
+34: 6f 2c 20 57  # 34--37: "o, W"
+38: 6f 72 6c 64  # 38--3b: "orld"
+3c: 21 0a        # 3c--3f: "!\n"
